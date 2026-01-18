@@ -1,0 +1,30 @@
+---
+import GeneratorLayout from "../../layouts/GeneratorLayout.astro";
+import GeneratorHeader from "../../components/GeneratorHeader.astro";
+import StructureUi from "../../generators/structure/StructureUi.astro";
+import { structureGenerator } from "../../generators/structure/generator";
+
+const title = `zygote.ro | ${structureGenerator.name}`;
+const description = structureGenerator.description;
+---
+
+<GeneratorLayout title={title} description={description}>
+    <GeneratorHeader
+        title={structureGenerator.name}
+        description={description}
+    />
+
+    <main class="page-content">
+        <div class="container">
+            <StructureUi generator={structureGenerator} />
+        </div>
+    </main>
+</GeneratorLayout>
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+</style>

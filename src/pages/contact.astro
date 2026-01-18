@@ -1,0 +1,123 @@
+---
+import GeneratorLayout from "../layouts/GeneratorLayout.astro";
+---
+
+<GeneratorLayout
+    title="Contact Us - zygote.ro"
+    description="Get in touch with the zygote.ro team for support, feedback, or feature requests."
+>
+    <div class="content-limit">
+        <h1>Contact Us</h1>
+
+        <div class="prose">
+            <p>
+                We value your feedback and contributions. Whether you've found a
+                bug, have a feature request, or just want to say hello, here is
+                how you can reach us.
+            </p>
+
+            <div class="contact-cards">
+                <a
+                    href="https://github.com/sindoutriqua/zygote.ro/issues"
+                    class="card"
+                >
+                    <h3>🐛 Report a Bug</h3>
+                    <p>
+                        Found something broken? Please open an issue on our
+                        GitHub repository.
+                    </p>
+                </a>
+
+                <a
+                    href="https://github.com/sindoutriqua/zygote.ro/discussions"
+                    class="card"
+                >
+                    <h3>💡 Feature Request</h3>
+                    <p>
+                        Have an idea for a new generator? Join the discussion.
+                    </p>
+                </a>
+
+                <div class="card">
+                    <h3>📧 Email</h3>
+                    <p>For urgent inquiries, reach out to us directly:</p>
+                    <a href="mailto:hello@zygote.ro" class="email-link"
+                        >hello@zygote.ro</a
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+</GeneratorLayout>
+
+<style>
+    .content-limit {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+        color: var(--color-text);
+    }
+
+    .prose p {
+        font-size: 1.125rem;
+        line-height: 1.8;
+        color: var(--color-muted-foreground);
+        margin-bottom: 2rem;
+    }
+
+    .contact-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+        .contact-cards {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+    }
+
+    .card {
+        display: block;
+        background: var(--color-bg);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        text-decoration: none;
+        transition:
+            transform 0.2s,
+            box-shadow 0.2s;
+    }
+
+    .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+        color: var(--color-text);
+        margin: 0 0 0.75rem 0;
+        font-size: 1.125rem;
+    }
+
+    .card p {
+        color: var(--color-muted);
+        font-size: 0.95rem;
+        margin: 0;
+    }
+
+    .email-link {
+        color: var(--color-primary);
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .email-link:hover {
+        text-decoration: underline;
+    }
+</style>

@@ -1,0 +1,88 @@
+---
+import GeneratorLayout from "../layouts/GeneratorLayout.astro";
+import { getAllGenerators } from "../generators/registry";
+
+const generators = getAllGenerators();
+---
+
+<GeneratorLayout
+	title="zygote.ro - Developer Generator Hub"
+	description="Free developer tools and generators to bootstrap your projects faster."
+>
+	<div class="hero">
+		<h1>Developer Generator Hub</h1>
+		<p>Bootstrap your projects with free, instant code generators.</p>
+	</div>
+
+	<div class="grid">
+		{
+			generators.map((gen) => (
+				<a href={`/generators/${gen.id}`} class="card">
+					<h3>{gen.name}</h3>
+					<p>{gen.description}</p>
+					<span class="arrow">→</span>
+				</a>
+			))
+		}
+	</div>
+</GeneratorLayout>
+
+<style>
+	.hero {
+		text-align: center;
+		padding: 3rem 0;
+	}
+
+	h1 {
+		font-size: 2.5rem;
+		font-weight: 800;
+		margin-bottom: 1rem;
+		letter-spacing: -0.02em;
+	}
+
+	p {
+		font-size: 1.25rem;
+		color: var(--color-muted);
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: 1.5rem;
+		padding: 1rem 0;
+	}
+
+	.card {
+		display: block;
+		background: var(--color-bg);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-lg);
+		padding: 1.5rem;
+		text-decoration: none;
+		transition:
+			transform 0.2s,
+			box-shadow 0.2s;
+	}
+
+	.card:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+	}
+
+	.card h3 {
+		color: var(--color-text);
+		margin: 0 0 0.5rem 0;
+		font-size: 1.25rem;
+	}
+
+	.card p {
+		color: var(--color-muted);
+		font-size: 0.95rem;
+		margin: 0 0 1rem 0;
+	}
+
+	.arrow {
+		color: var(--color-primary);
+		font-weight: bold;
+	}
+</style>

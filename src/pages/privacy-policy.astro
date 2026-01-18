@@ -1,0 +1,120 @@
+---
+import GeneratorLayout from "../layouts/GeneratorLayout.astro";
+---
+
+<GeneratorLayout
+    title="Privacy Policy - zygote.ro"
+    description="Privacy Policy for zygote.ro. We prioritize your privacy with client-side only generation tools."
+>
+    <div class="content-limit">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: January 18, 2026</p>
+
+        <div class="prose">
+            <p>
+                At <strong>zygote.ro</strong>, we take your privacy seriously.
+                This Privacy Policy explains how we handle your information when
+                you use our website.
+            </p>
+
+            <h2>1. No Data Collection</h2>
+            <p>
+                The core functionality of our generators runs entirely in your
+                web browser (client-side).
+                <strong
+                    >We do not transmit, store, or process your input data on
+                    our servers.</strong
+                >
+                Any project names, code snippets, or configuration details you enter
+                remain on your device.
+            </p>
+
+            <h2>2. Analytics</h2>
+            <p>
+                We use <strong>Google Analytics 4 (GA4)</strong> to understand how
+                visitors interact with our website to improve the user experience.
+                Google Analytics uses cookies to collect anonymous data such as:
+            </p>
+            <ul>
+                <li>Pages you visit and how much time you spend on them</li>
+                <li>Your approximate location (e.g., country or city)</li>
+                <li>The device and browser you are using</li>
+            </ul>
+            <p>
+                We do not collect any Personally Identifiable Information (PII)
+                through Google Analytics. IP addresses are processed by Google
+                but are not logged or stored.
+            </p>
+
+            <h2>3. External Links</h2>
+            <p>
+                Our website may contain links to external sites (e.g., GitHub,
+                documentation). We are not responsible for the privacy practices
+                of these external sites.
+            </p>
+
+            <h2>4. Changes to This Policy</h2>
+            <p>
+                We may update this Privacy Policy from time to time. We will
+                notify you of any changes by posting the new Privacy Policy on
+                this page.
+            </p>
+
+            <h2>5. Contact Us</h2>
+            <p>
+                If you have any questions about this Privacy Policy, please <a
+                    href="/contact">contact us</a
+                >.
+            </p>
+        </div>
+    </div>
+</GeneratorLayout>
+
+<style>
+    .content-limit {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+        color: var(--color-text);
+    }
+
+    .last-updated {
+        font-size: 0.875rem;
+        color: var(--color-subtle);
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--color-text);
+    }
+
+    .prose p {
+        font-size: 1.125rem;
+        line-height: 1.8;
+        color: var(--color-muted-foreground);
+        margin-bottom: 1.5rem;
+    }
+
+    a {
+        color: var(--color-primary);
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    strong {
+        color: var(--color-text);
+        font-weight: 600;
+    }
+</style>

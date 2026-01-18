@@ -1,0 +1,55 @@
+import type { GitignoreRuleSet } from '../types';
+
+export const osRules: Record<string, GitignoreRuleSet> = {
+    macos: {
+        id: 'macos',
+        name: 'macOS',
+        content: [
+            '.DS_Store',
+            '.AppleDouble',
+            '.LSOverride',
+            '._*',
+            '.DocumentRevisions-V100',
+            '.fseventsd',
+            '.Spotlight-V100',
+            '.TemporaryItems',
+            '.Trashes',
+            '.VolumeIcon.icns',
+            '.com.apple.timemachine.donotpresent',
+            '.AppleDB',
+            '.AppleDesktop',
+            'Network Trash Folder',
+            'Temporary Items',
+            '.apdisk',
+        ],
+    },
+    windows: {
+        id: 'windows',
+        name: 'Windows',
+        content: [
+            'Thumbs.db',
+            'Thumbs.db:encryptable',
+            'ehthumbs.db',
+            'ehthumbs_vista.db',
+            '*.stackdump',
+            '[Dd]esktop.ini',
+            '$RECYCLE.BIN/',
+            '*.cab',
+            '*.msi',
+            '*.msm',
+            '*.msp',
+            '*.lnk',
+        ],
+    },
+    linux: {
+        id: 'linux',
+        name: 'Linux',
+        content: [
+            '*~',
+            '.fuse_hidden*',
+            '.directory',
+            '.Trash-*',
+            '.nfs*',
+        ],
+    },
+};

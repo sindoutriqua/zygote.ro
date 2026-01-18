@@ -1,0 +1,22 @@
+---
+import GeneratorLayout from "../../layouts/GeneratorLayout.astro";
+import GeneratorHeader from "../../components/GeneratorHeader.astro";
+import GitignoreUi from "../../generators/gitignore/GitignoreUi.astro";
+import { gitignoreGenerator } from "../../generators/gitignore/generator";
+
+const generator = gitignoreGenerator;
+---
+
+<GeneratorLayout
+    title={`${generator.name} - Free Online Tool`}
+    description={generator.description}
+>
+    <GeneratorHeader title={generator.name} description={generator.description} />
+
+    <GitignoreUi generator={generator} />
+</GeneratorLayout>
+
+<style>
+<style>
+</style>
+</style>

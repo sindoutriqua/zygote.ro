@@ -1,0 +1,22 @@
+---
+import GeneratorLayout from "../../layouts/GeneratorLayout.astro";
+import GeneratorHeader from "../../components/GeneratorHeader.astro";
+import ReadmeUi from "../../generators/readme/ReadmeUi.astro";
+import { readmeGenerator } from "../../generators/readme/generator";
+
+const generator = readmeGenerator;
+---
+
+<GeneratorLayout
+    title={`${generator.name} - Free Online Tool`}
+    description={generator.description}
+>
+    <GeneratorHeader title={generator.name} description={generator.description} />
+
+    <ReadmeUi generator={generator} />
+</GeneratorLayout>
+
+<style>
+<style>
+</style>
+</style>
