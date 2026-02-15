@@ -1,0 +1,22 @@
+---
+import GeneratorLayout from "../../layouts/GeneratorLayout.astro";
+import GeneratorHeader from "../../components/GeneratorHeader.astro";
+import CmakeUi from "../../generators/cmake/CmakeUi.astro";
+import { cmakeGenerator } from "../../generators/cmake/generator";
+
+const generator = cmakeGenerator;
+---
+
+<GeneratorLayout
+    title={`${generator.name} - Free Online Tool`}
+    description={generator.description}
+>
+    <GeneratorHeader
+        title={generator.name}
+        description={generator.description}
+    />
+
+    <CmakeUi generator={generator} />
+</GeneratorLayout>
+
+<style></style>

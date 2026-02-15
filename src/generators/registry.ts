@@ -2,11 +2,13 @@ import type { Generator } from './types';
 import { readmeGenerator } from './readme/generator';
 import { gitignoreGenerator } from './gitignore/generator';
 import { structureGenerator } from './structure/generator';
+import { cmakeGenerator } from './cmake/generator';
 
 export const generators: Record<string, Generator> = {
     readme: readmeGenerator,
     gitignore: gitignoreGenerator,
     structure: structureGenerator,
+    cmake: cmakeGenerator,
 };
 
 export function getGenerator(id: string): Generator | undefined {
